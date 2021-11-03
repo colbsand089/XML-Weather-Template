@@ -23,6 +23,28 @@ namespace XMLWeather
             tempLabel.Text = Form1.days[0].currentTemp;
             minOutput.Text = Form1.days[0].tempLow;
             maxOutput.Text = Form1.days[0].tempHigh;
+            conditionLabel.Text = Form1.days[0].condition;
+            
+            if (conditionLabel.Text == "clear sky")
+            {
+                todayConditionbox.Image = Properties.Resources.sunny;
+            }
+            if (conditionLabel.Text == "overcast clouds")
+            {
+                todayConditionbox.Image = Properties.Resources.cloudy;
+            }
+            if (conditionLabel.Text == "snow")
+            {
+                todayConditionbox.Image = Properties.Resources.snow;
+            }
+            if (conditionLabel.Text == "thunderstorm")
+            {
+                todayConditionbox.Image = Properties.Resources.stormy;
+            }
+            if (conditionLabel.Text == "rain")
+            {
+                todayConditionbox.Image = Properties.Resources.rainy;
+            }
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)
